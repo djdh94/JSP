@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%
+    String sId = request.getParameter("id");
+    String sPw = request.getParameter("pw");
+    %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%if(sId.equals("abcd") && sPw.equals("1234")){ %>
+		<%=sId %>님 환영합니다
+	<%}else{ %>
+	로그인에 실패하였습니다.
+	<%} %>
+</body>
+</html>

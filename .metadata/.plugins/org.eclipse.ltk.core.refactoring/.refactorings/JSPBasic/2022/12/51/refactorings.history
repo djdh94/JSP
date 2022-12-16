@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;req_login_form.jsp&apos; to &apos;1.requests&apos;" description="Move &apos;req_login_form.jsp&apos; to &apos;1.requests&apos;" destination="src/main/webapp/JspObject/1.requests" element1="src/main/webapp/JspObject/req_login_form.jsp" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1671198345093" updateReferences="true"/>
+</session>
