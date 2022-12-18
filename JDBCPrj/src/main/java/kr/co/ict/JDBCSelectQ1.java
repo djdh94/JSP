@@ -1,0 +1,42 @@
+package kr.co.ict;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class JDBCSelectQ1 {
+
+	public static void main(String[] args) {
+		String dbType="com.mysql.cj.jdbc.Driver";
+		String dbUrl="jdbc:mysql://localhost:3306/jdbcprac1";
+		String dbId = "root";
+		String dbPw = "mysql";
+		try {
+			
+		Scanner scan = new Scanner(System.in);
+		System.out.println("아이디를 입력해주세요");
+		String uid = scan.nextLine();
+		
+		Class.forName(dbType);
+		Connection con = DriverManager.getConnection(dbUrl,dbId,dbPw);
+		Statement stmt = con.createStatement();
+		ResultSet rs =  stmt.executeQuery("select * from userinfo where uid='"+uid+"'");
+		while(rs.next()) {
+			System.out.println(rs.getString(1));
+			System.out.println(rs.getString(2));
+			System.out.println(rs.getString(3));
+			System.out.println(rs.getString(4));
+		}
+		
+		
+		
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+
+	}
+
+}
