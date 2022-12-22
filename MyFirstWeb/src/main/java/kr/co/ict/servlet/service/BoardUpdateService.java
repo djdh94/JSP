@@ -14,6 +14,7 @@ public class BoardUpdateService implements IBoardService{
 		System.out.println("bno:"+bno);
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
+		
 		BoardDAO dao = BoardDAO.getInstance();
 		dao.BoardUpdate(title, content, bno);
 		

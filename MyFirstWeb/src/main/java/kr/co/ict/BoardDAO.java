@@ -19,6 +19,7 @@ public class BoardDAO {
   	ResultSet rs=null;
   	List<BoardVO> boardList = new ArrayList<BoardVO>();
   	BoardVO board=null;
+  	
 	private static BoardDAO dao = new BoardDAO();
 	private BoardDAO() {
 		try {
@@ -88,6 +89,7 @@ public class BoardDAO {
 	}
 	
 	public BoardVO getBoardDetail(int bno) {
+		//upHit(bno);
 		try {
 			con = ds.getConnection();
 			String sql ="select * from boardinfo where board_num=?";
@@ -157,6 +159,28 @@ public class BoardDAO {
 			}
 		}
 		
+	}
+	
+	public void upHit(int strBId) {
+		
+		String sql="UPDATE boardinfo set hit=(hit+1) where board_num=?";		
+		System.out.println("현재 조회된 글 번호"+strBId);
+		try {
+			con=ds.getConnection();
+		pstmt=con.prepareStatement(sql);
+		pstmt.setInt(1, strBId);
+		pstmt.executeUpdate();
+		
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				con.close();
+				pstmt.close();
+			}catch(SQLException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
 }

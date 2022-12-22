@@ -22,7 +22,18 @@
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="kr.co.ict.BoardVO"/>
-    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="kr.co.ict.BoardDAO"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+    <fullyQualifiedTypeName name="kr.co.ict.servlet.service.BoardListService"/>
+    <fullyQualifiedTypeName name="kr.co.ict.servlet.service.BoardDetailService"/>
+    <fullyQualifiedTypeName name="kr.co.ict.servlet.service.BoardDeleteService"/>
+    <fullyQualifiedTypeName name="kr.co.ict.servlet.service.BoardUpdateFormService"/>
+    <fullyQualifiedTypeName name="kr.co.ict.servlet.service.BoardUpdateService"/>
+    <fullyQualifiedTypeName name="kr.co.ict.servlet.service.IBoardService"/>
+    <fullyQualifiedTypeName name="kr.co.ict.servlet.service.BoardInsertService"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="kr.co.ict.servlet.service.BoardInsertFormService"/>
 </qualifiedTypeNameHistroy>
